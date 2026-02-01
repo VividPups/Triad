@@ -1,5 +1,5 @@
 <div class="header" align="center">
-<img alt="Frontier Station" height="300" src="https://github.com/fenndragon/HardLight/blob/master/Resources/Textures/_NF/Logo/logo.png?raw=true" />
+<img alt="Frontier Station" height="300" src="https://raw.githubusercontent.com/Triad-Sector/Triad/refs/heads/master/Resources/Textures/_NF/Logo/logo.png" />
 </div>
 
 ## License
@@ -9,7 +9,7 @@ Content contributed to this repository before commit 2fca06eaba205ae6fe3aceb8ae2
 
 [2fca06eaba205ae6fe3aceb8ae2a0594f0effee0](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) was pushed on July 1, 2024 at 16:04 UTC
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).  
+Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
 Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
 
@@ -33,7 +33,7 @@ Content under these subdirectories originate from their respective forks and may
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
-
+| `_HL` | Hardlight Sector | https://github.com/HardLightSector/HardLight | AGPL 3.0 |
 Additional repos that we have ported features from without subdirectories are listed below.
 
 | Fork Name | Fork Repository | License |
@@ -41,3 +41,4 @@ Additional repos that we have ported features from without subdirectories are li
 | Monolith | https://github.com/Monolith-Station/Monolith | AGPL 3.0 |
 | Space Station 14 | https://github.com/space-wizards/space-station-14 | MIT |
 | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
+| Hardlight | https://github.com/HardLightSector/HardLight | AGPL 3.0 |
