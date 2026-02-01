@@ -13,8 +13,8 @@
   parent: BasePOI
   name: Trade Outpost
   minimumDistance: 3500
-  maximumDistance: 6500
-  spawnGroup: MarketStation
+  maximumDistance: 4500
+  spawnGroup: Required
   gridPath: /Maps/_NF/POI/trade.yml
   addComponents:
   - type: IFF
