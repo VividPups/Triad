@@ -17,7 +17,7 @@ discord    = "https://discord.gg/q6dqdPcMnv"
 github     = "https://github.com/Triad-Sector/Triad"
 
 [net]
-max_connections = 1024
+max_connections = 100
 tickrate = 30
 
 [vote]
