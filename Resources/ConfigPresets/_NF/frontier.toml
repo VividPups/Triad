@@ -36,12 +36,12 @@ allow_multi_server_play = false
 min_players_sharing_connection = 2
 
 [server]
-id = "frontier"
+id = "Triad"
 rules_file = "FrontierRuleset"
 uptime_restart_minutes = 0
 
 [discord]
-rich_main_icon_id = "frontier"
+rich_main_icon_id = "Triad"
 
 # general mrp stuff
 [ic]
@@ -52,7 +52,7 @@ punctuation = true
 enabled = true
 
 [rules]
-time = 60
+time = 30
 
 [ahelp]
 admin_prefix = false
