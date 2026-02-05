@@ -63,7 +63,7 @@ public sealed class NFCCVars
     /// The number of Trade Stations to spawn in every round
     /// </summary>
     public static readonly CVarDef<int> MarketStations =
-        CVarDef.Create("nf14.worldgen.market_stations", 0, CVar.SERVERONLY);
+        CVarDef.Create("nf14.worldgen.market_stations", 1, CVar.SERVERONLY);
 
     /// <summary>
     /// The number of Cargo Depots to spawn in every round
@@ -278,7 +278,7 @@ public sealed class NFCCVars
     /// Amount paid to a medical rescuer when a critically-injured patient is brought back to alive.
     /// </summary>
     public static readonly CVarDef<int> RewardsMedicalReviveAmount =
-        CVarDef.Create("nf14.rewards.medical_revive_amount", 10000, CVar.SERVERONLY);
+        CVarDef.Create("nf14.rewards.medical_revive_amount", 15000, CVar.SERVERONLY);
 
     /// <summary>
     /// Cooldown in minutes per rescued person for medical revive payouts.
@@ -290,13 +290,13 @@ public sealed class NFCCVars
     /// Amount paid to Security for killing a hostile mob (faction-hostile to NanoTrasen).
     /// </summary>
     public static readonly CVarDef<int> RewardsSecurityKillHostileAmount =
-        CVarDef.Create("nf14.rewards.security_kill_hostile_amount", 2000, CVar.SERVERONLY);
+        CVarDef.Create("nf14.rewards.security_kill_hostile_amount", 4000, CVar.SERVERONLY);
 
     /// <summary>
     /// Amount paid to Security for killing an antagonist player.
     /// </summary>
     public static readonly CVarDef<int> RewardsSecurityKillAntagAmount =
-        CVarDef.Create("nf14.rewards.security_kill_antag_amount", 15000, CVar.SERVERONLY);
+        CVarDef.Create("nf14.rewards.security_kill_antag_amount", 25000, CVar.SERVERONLY);
 
     /// <summary>
     /// Amount paid to each Security member at round end for each antagonist in custody.
