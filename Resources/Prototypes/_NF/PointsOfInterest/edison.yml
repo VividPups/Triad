@@ -14,7 +14,7 @@
   name: 'Edison Power Plant'
   minimumDistance: 4000
   maximumDistance: 5000
-  spawnGroup: MarketStation
+  spawnGroup: Required
   gridPath: /Maps/_NF/POI/edison.yml
   addComponents:
   - type: IFF
@@ -37,8 +37,8 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Edison Power Plant'
-        # - type: StationJobs
-          # availableJobs:
-            # Pilot: [ 0, 0 ]
-            # Mercenary: [ 0, 0 ]
-            # Contractor: [ 0, 0 ]
+         #- type: StationJobs
+           #availableJobs:
+             #Pilot: [ 0, 0 ]
+             #Mercenary: [ 0, 0 ]
+             #Contractor: [ 0, 0 ]
