@@ -7,8 +7,8 @@
    background: /Textures/LobbyScreens/pharmacy.webp
 
  - type: lobbyBackground
-   -id: SSXIV
-   -background: /Textures/LobbyScreens/ssxiv.webp
+   id: SSXIV
+   background: /Textures/LobbyScreens/ssxiv.webp
 
  - type: lobbyBackground
    id: Susstation
