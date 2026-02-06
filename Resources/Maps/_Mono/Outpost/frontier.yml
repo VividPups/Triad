@@ -12376,15 +12376,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: -12.5,43.5
       parent: 3
-- proto: CircularShieldConsole
-  entities:
-  - uid: 1488
-    components:
-    - type: Transform
-      pos: 2.5,34.5
-      parent: 3
-    - type: ApcPowerReceiver
-      powerLoad: 5
+#- proto: CircularShieldConsole  triad need to fix
+#  entities:
+#  - uid: 1488
+#    components:
+#    - type: Transform
+#      pos: 2.5,34.5
+#      parent: 3
+#    - type: ApcPowerReceiver
+#      powerLoad: 5
 - proto: CleanerDispenser
   entities:
   - uid: 1489
