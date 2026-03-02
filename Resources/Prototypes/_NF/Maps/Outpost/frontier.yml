@@ -1,7 +1,7 @@
 - type: gameMap
   id: Frontier
-  mapName: 'Frontier Outpost'
-  mapPath: /Maps/_Mono/Outpost/frontier.yml
+  mapName: 'Triad Outpost'
+  mapPath: /Maps/__Triad/Outpost/Triad Outpost.yml
   minPlayers: 0
   maxPlayers: 100
   randomRotation: false
@@ -11,7 +11,7 @@
       stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Frontier Outpost'
+          mapNameTemplate: 'Triad Outpost'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
