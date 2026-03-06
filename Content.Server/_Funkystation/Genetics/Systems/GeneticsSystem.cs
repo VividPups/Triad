@@ -35,18 +35,18 @@ public sealed partial class GeneticsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<GeneticsComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<GeneticsComponent, DamageChangedEvent>(OnRadiationDamage);
+        SubscribeLocalEvent<Shared._Funkystation.Genetics.Components.GeneticsComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<Shared._Funkystation.Genetics.Components.GeneticsComponent, DamageChangedEvent>(OnRadiationDamage);
     }
 
-    private void OnInit(EntityUid uid, GeneticsComponent component, ComponentInit args)
+    private void OnInit(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, ComponentInit args)
     {
         FillBaseMutations(uid, component);
         component.RadsUntilRandomMutation = _random.NextFloat(MinRadsUntilMutation, MaxRadsUntilMutation);
         Dirty(uid, component);
     }
 
-    private void OnRadiationDamage(EntityUid uid, GeneticsComponent component, ref DamageChangedEvent args)
+    private void OnRadiationDamage(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, ref DamageChangedEvent args)
     {
         if (!args.DamageIncreased || args.DamageDelta is not { } delta)
             return;
@@ -67,7 +67,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    public void FillBaseMutations(EntityUid uid, GeneticsComponent? component = null)
+    public void FillBaseMutations(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return;
@@ -156,7 +156,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    private string? PickRandomAvailableMutation(EntityUid uid, GeneticsComponent component)
+    private string? PickRandomAvailableMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component)
     {
         var candidates = _proto.EnumeratePrototypes<GeneticMutationPrototype>()
             .Where(p => CanEntityReceiveMutation(uid, p, true))
@@ -195,7 +195,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return candidates.Last().ID;
     }
 
-    public void TriggerRandomMutation(EntityUid uid, GeneticsComponent component)
+    public void TriggerRandomMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component)
     {
         var chosenId = PickRandomAvailableMutation(uid, component);
         if (chosenId == null)
@@ -209,7 +209,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         TryActivateMutation(uid, component, chosenId);
     }
 
-    public void RemoveRandomMutation(EntityUid uid, GeneticsComponent component, bool mutadone = false)
+    public void RemoveRandomMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, bool mutadone = false)
     {
         var removable = new List<string>();
 
@@ -278,7 +278,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return new string(chars);
     }
 
-    public bool TryAddMutation(EntityUid uid, GeneticsComponent component, string mutationId)
+    public bool TryAddMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, string mutationId)
     {
         var slot = _shuffle.GetOrAssignSlot(mutationId);
 
@@ -311,7 +311,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return true;
     }
 
-    public bool TryRemoveMutation(EntityUid uid, GeneticsComponent component, string mutationId)
+    public bool TryRemoveMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, string mutationId)
     {
         var entry = component.Mutations.Find(m => m.Id == mutationId);
         if (entry == null)
@@ -342,7 +342,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return true;
     }
 
-    public bool TryActivateMutation(EntityUid uid, GeneticsComponent component, string mutationId)
+    public bool TryActivateMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, string mutationId)
     {
         var entry = component.Mutations.Find(m => m.Id == mutationId);
         if (entry == null || entry.Enabled)
@@ -379,7 +379,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return true;
     }
 
-    public bool TryDeactivateMutation(EntityUid uid, GeneticsComponent component, string mutationId)
+    public bool TryDeactivateMutation(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, string mutationId)
     {
         var entry = component.Mutations.Find(m => m.Id == mutationId);
         if (entry == null || !entry.Enabled)
@@ -398,7 +398,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return true;
     }
 
-    private void ApplyMutationComponents(EntityUid uid, GeneticsComponent component, GeneticMutationPrototype proto)
+    private void ApplyMutationComponents(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, GeneticMutationPrototype proto)
     {
         EntityManager.AddComponents(uid, proto.Components);
         Dirty(uid, component);
@@ -413,13 +413,13 @@ public sealed partial class GeneticsSystem : EntitySystem
         }
     }
 
-    private bool IsConflictingWithExisting(GeneticsComponent component, GeneticMutationPrototype proto)
+    private bool IsConflictingWithExisting(Shared._Funkystation.Genetics.Components.GeneticsComponent component, GeneticMutationPrototype proto)
     {
         return proto.Conflicts.Any(conflictId =>
             component.Mutations.Any(m => m.Id == conflictId));
     }
 
-    private void ModifyInstability(EntityUid uid, GeneticsComponent component, int delta)
+    private void ModifyInstability(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, int delta)
     {
         if (delta == 0) return;
 
@@ -510,7 +510,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         return proto.Parents is { } parents && parents.Any(parent => IsPrototypeOrParentInList(parent, list));
     }
 
-    public bool TryModifyMutationSequence(EntityUid uid, GeneticsComponent component, string mutationId, int index, char newBase)
+    public bool TryModifyMutationSequence(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent component, string mutationId, int index, char newBase)
     {
         var entryIndex = component.Mutations.FindIndex(m => m.Id == mutationId);
         if (entryIndex == -1)
@@ -550,7 +550,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         );
     }
 
-    public void ScrambleDna(EntityUid uid, GeneticsComponent genetics)
+    public void ScrambleDna(EntityUid uid, Shared._Funkystation.Genetics.Components.GeneticsComponent genetics)
     {
         // Collect all scramble-resistant mutations
         var preservedEntries = new List<MutationEntry>();

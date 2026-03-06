@@ -1,8 +1,8 @@
-using Content.Shared._Funkystation.Genetics;
+using Robust.Shared.GameStates;
 
-namespace Content.Server._Funkystation.Genetics.Components;
+namespace Content.Shared._Funkystation.Genetics.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState(true)]
 public sealed partial class GeneticsComponent : Component
 {

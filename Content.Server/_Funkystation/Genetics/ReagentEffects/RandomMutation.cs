@@ -36,10 +36,10 @@ public sealed partial class RandomMutation : EntityEffect
 
         var entMan = args.EntityManager;
 
-        if (!entMan.HasComponent<GeneticsComponent>(entity))
+        if (!entMan.HasComponent<Shared._Funkystation.Genetics.Components.GeneticsComponent>(entity))
             return;
 
-        if (!entMan.TryGetComponent<GeneticsComponent>(entity, out var genetics))
+        if (!entMan.TryGetComponent<Shared._Funkystation.Genetics.Components.GeneticsComponent>(entity, out var genetics))
             return;
 
         var geneticsSystem = entMan.System<GeneticsSystem>();

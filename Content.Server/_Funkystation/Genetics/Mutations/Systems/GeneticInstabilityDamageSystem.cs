@@ -33,7 +33,7 @@ public sealed class GeneticsInstabilityDamageSystem : EntitySystem
 
         _accumulator -= TickInterval;
 
-        var query = EntityQueryEnumerator<GeneticsComponent, DamageableComponent, GeneticsInstabilityDamageComponent>();
+        var query = EntityQueryEnumerator<Shared._Funkystation.Genetics.Components.GeneticsComponent, DamageableComponent, GeneticsInstabilityDamageComponent>();
         while (query.MoveNext(out var uid, out var genetics, out var damageable, out _))
         {
             if (genetics.GeneticInstability <= InstabilityThreshold)
