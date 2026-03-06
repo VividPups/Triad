@@ -22,10 +22,10 @@ public sealed partial class MutationRemoval : EntityEffect
 
         var entMan = args.EntityManager;
 
-        if (!entMan.HasComponent<GeneticsComponent>(entity))
+        if (!entMan.HasComponent<Shared._Funkystation.Genetics.Components.GeneticsComponent>(entity))
             return;
 
-        if (!entMan.TryGetComponent(entity, out GeneticsComponent? genetics) || genetics == null)
+        if (!entMan.TryGetComponent(entity, out Shared._Funkystation.Genetics.Components.GeneticsComponent? genetics) || genetics == null)
             return;
 
         var geneticsSystem = entMan.System<GeneticsSystem>();

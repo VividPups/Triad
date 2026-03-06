@@ -67,7 +67,7 @@ public sealed class InstabilityCountdownSystem : EntitySystem
 
     private void TriggerMutation(EntityUid uid, PendingInstabilityMutationComponent pending)
     {
-        if (!TryComp<GeneticsComponent>(uid, out var genetics))
+        if (!TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(uid, out var genetics))
             return;
 
         // Pick a random instability mutation

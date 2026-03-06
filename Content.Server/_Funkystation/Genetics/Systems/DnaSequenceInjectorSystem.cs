@@ -133,7 +133,7 @@ public sealed class DNASequenceInjectorSystem : EntitySystem
             return false;
         }
 
-        if (!TryComp<GeneticsComponent>(targetUid, out var genetics))
+        if (!TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(targetUid, out var genetics))
         {
             return false;
         }

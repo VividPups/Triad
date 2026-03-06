@@ -26,7 +26,7 @@ public sealed class MutationInstabilityPolymorphSystem : EntitySystem
     private void OnInit(EntityUid oldUid, MutationInstabilityPolymorphComponent component, ComponentInit args)
     {
         // If no genetics, just try to polymorph and bail. This should never happen outside of testing.
-        if (!TryComp<GeneticsComponent>(oldUid, out var oldGenetics))
+        if (!TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(oldUid, out var oldGenetics))
         {
             _polymorph.PolymorphEntity(oldUid, component.PolymorphId);
             return;
@@ -61,7 +61,7 @@ public sealed class MutationInstabilityPolymorphSystem : EntitySystem
         // The old entity is now deleted, we're working on the new one
 
         // Restore GeneticsComponent with exact previous state
-        var newGenetics = EnsureComp<GeneticsComponent>(newUid.Value);
+        var newGenetics = EnsureComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(newUid.Value);
         newGenetics.Mutations.Clear();
         foreach (var entry in mutationSnapshot)
         {
