@@ -314,6 +314,10 @@
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+# Triad start
+  - type: Sanitized
+    sanitizeOnSpawn: true
+
 
 - type: entity
   id: BorgChassisService
