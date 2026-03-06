@@ -33,3 +33,35 @@
     sprite: _Goobstation/Clothing/Shoes/Boots/breverb.rsi
 
 
+
+# Triad Changes Combing _Goobstation and Goobstation together
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsChrono
+  name: futuristic boots
+  description: An advanced futuristic shoe that guarantees wearer comfort and full traction on any surface
+  components:
+  - type: Sprite
+    sprite: Goobstation/Clothing/Shoes/Boots/chronolegioneer.rsi
+    state: icon
+  - type: Clothing
+    sprite: Goobstation/Clothing/Shoes/Boots/chronolegioneer.rsi
+  - type: Magboots
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHeavySuit
+
+- type: entity
+  parent: ClothingShoesBootsChrono
+  id: ClothingShoesBootsChronoUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
