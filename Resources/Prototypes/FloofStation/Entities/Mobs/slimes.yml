@@ -1,6 +1,6 @@
 - type: entity
   id: ReagentSlimeCum
-  parent: ReagentSlime
+  parent: ReagentSlime`1231`241221
   suffix: Cum
   components:
   - type: Bloodstream
