@@ -74,3 +74,17 @@
   materials:
     Steel: 300
     Glass: 200
+
+
+# Triad
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: DefibrillatorCompact
+  result: DefibrillatorCompact
+  categories:
+  - Tools
+  completetime: 4
+  materials:
+    Steel: 100
+    Plastic: 200
+    Glass: 50
