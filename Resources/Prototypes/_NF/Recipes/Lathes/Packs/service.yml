@@ -33,6 +33,7 @@
   recipes:
   - CondimentDispenserCircuitboard
   - ImpCoffeeMachineCircuitboard #imp
+  - HotplateMachineCircuitboard # Triad
 
 - type: latheRecipePack
   id: NFServiceBoards
