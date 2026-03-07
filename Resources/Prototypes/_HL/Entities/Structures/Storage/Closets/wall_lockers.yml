@@ -3,7 +3,7 @@
   parent: NFBaseLockerGridInvWallColor
   name: Bluespace wall locker
   suffix: null
-  description: Wall locker infused with bluespace tech. Items inside of this will not be seized by dockyard technicians when a ship is stored.
+  description: Wall locker infused with bluespace tech. Items inside of this will not be seized by dockyard technicians when a ship is stored. Designed by SESWC. # Triad
   components:
   - type: Sprite
     sprite: _HL/Structures/Closets/Bluespace_wall_locker.rsi
