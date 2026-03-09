@@ -43,13 +43,13 @@
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
-            Sheriff: [ 1, 1 ]
-            Bailiff: [ 1, 1 ]
+            HeadOfSecurity: [ 1, 1 ]
             SeniorOfficer: [ 2, 2 ]
+            SecurityOfficer: [ 4, 4 ]
+            Warden: [ 1, 1 ]
+            SecurityCadet: [ 2, 2 ] #intern, not counted
+            Detective: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
-            #NFDetective: [ 0, 0 ] # Mono
-            Deputy: [ 4, 4 ]
-            Cadet: [ 2, 2 ] # Mono
             # Others:
             #PublicAffairsLiaison: [ 1, 1 ] # Mono
           tags:
