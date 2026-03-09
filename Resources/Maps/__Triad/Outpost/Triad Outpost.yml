@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 03/05/2026 22:13:33
-  entityCount: 4767
+  time: 03/09/2026 05:38:28
+  entityCount: 4758
 maps:
 - 1
 grids:
@@ -5848,18 +5848,6 @@ entities:
       parent: 3
 - proto: BenchSteelLeft
   entities:
-  - uid: 228
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,13.5
-      parent: 3
-  - uid: 229
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,9.5
-      parent: 3
   - uid: 230
     components:
     - type: Transform
@@ -5890,42 +5878,6 @@ entities:
       parent: 3
 - proto: BenchSteelMiddle
   entities:
-  - uid: 235
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,11.5
-      parent: 3
-  - uid: 236
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,10.5
-      parent: 3
-  - uid: 237
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,11.5
-      parent: 3
-  - uid: 238
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,12.5
-      parent: 3
-  - uid: 239
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,10.5
-      parent: 3
-  - uid: 240
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,12.5
-      parent: 3
   - uid: 241
     components:
     - type: Transform
@@ -5944,18 +5896,6 @@ entities:
       parent: 3
 - proto: BenchSteelRight
   entities:
-  - uid: 244
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,9.5
-      parent: 3
-  - uid: 245
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,13.5
-      parent: 3
   - uid: 246
     components:
     - type: Transform
@@ -24884,6 +24824,13 @@ entities:
     - type: Transform
       pos: -13.5,5.5
       parent: 3
+- proto: passionDrobe
+  entities:
+  - uid: 236
+    components:
+    - type: Transform
+      pos: -28.5,11.5
+      parent: 3
 - proto: PlushieNuke
   entities:
   - uid: 4724
@@ -25966,23 +25913,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 21.5,21.5
-      parent: 3
-- proto: RandomVendingClothing
-  entities:
-  - uid: 3434
-    components:
-    - type: Transform
-      pos: -27.5,11.5
-      parent: 3
-  - uid: 4717
-    components:
-    - type: Transform
-      pos: -28.5,11.5
-      parent: 3
-  - uid: 4718
-    components:
-    - type: Transform
-      pos: -25.5,11.5
       parent: 3
 - proto: RandomVendingDrinks
   entities:
@@ -27575,12 +27505,12 @@ entities:
     - type: Transform
       pos: -7.5,5.5
       parent: 3
-- proto: SpawnPointDeputy
+- proto: SpawnPointJanitor
   entities:
-  - uid: 3258
+  - uid: 228
     components:
     - type: Transform
-      pos: 12.5,22.5
+      pos: -27.5,34.5
       parent: 3
 - proto: SpawnPointLatejoin
   entities:
@@ -27666,6 +27596,13 @@ entities:
     components:
     - type: Transform
       pos: -9.5,5.5
+      parent: 3
+- proto: SpawnPointSecurityOfficer
+  entities:
+  - uid: 237
+    components:
+    - type: Transform
+      pos: 12.5,23.5
       parent: 3
 - proto: SpawnPointStationCaptain
   entities:
@@ -29055,6 +28992,13 @@ entities:
     - type: Transform
       pos: 3.5,11.5
       parent: 3
+- proto: VendingMachinePride
+  entities:
+  - uid: 229
+    components:
+    - type: Transform
+      pos: -27.5,11.5
+      parent: 3
 - proto: VendingMachineSalvagePOI
   entities:
   - uid: 3861
@@ -29098,6 +29042,13 @@ entities:
     components:
     - type: Transform
       pos: 16.5,13.5
+      parent: 3
+- proto: VendingMachineWinter
+  entities:
+  - uid: 235
+    components:
+    - type: Transform
+      pos: -25.5,11.5
       parent: 3
 - proto: VendingMachineYouToolPOI
   entities:

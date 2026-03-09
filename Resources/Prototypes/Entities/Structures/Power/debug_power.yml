@@ -7,6 +7,9 @@
     supplyRate: 300000
     supplyRampRate: 50000
     supplyRampTolerance: 500
+  - type: Anchorable
+    flags:
+    - Unanchorable
   - type: Tag
     tags:
       - Debug
