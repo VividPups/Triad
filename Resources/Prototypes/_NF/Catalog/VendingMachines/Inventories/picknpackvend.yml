@@ -42,4 +42,5 @@
     AmmoBox762x39mmBigFMJ: 4294967295
     AmmoBox12_gaugeBuckshot: 4294967295
     AmmoBox45_ACPBigFMJ: 4294967295 #Triad change
+    AmmoBox45_magnumFMJ: 4294967295 #Triad change
   emaggedInventory:
