@@ -30,6 +30,7 @@
     NFAmmunitionBoxRifle25Practice: 10
     NFAmmunitionBoxRifle30Practice: 5
     NFAmmunitionBoxShellShotgunPractice: 8
+    AmmoBox45_magnumRubber: 10
   contrabandInventory:
     SpeedLoader556x45mmPractice: 3
     SpeedLoader9x19mmPractice: 3
