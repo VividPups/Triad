@@ -159,6 +159,7 @@
   - EnergyCautery
   - AdvancedRetractor
   - BorgModuleAdvancedSurgery
+  - DefibrillatorCompact # Triad
 
 - type: technology
   id: CyberneticEnhancements

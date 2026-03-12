@@ -82,7 +82,8 @@
     #WeaponRevolverArgenti: 4294967295
     WeaponPistolMk32: 4294967295
     WeaponRevolverFaith: 4294967295
-    WeaponShotgunBigJohnny: 4294967295
+    # WeaponShotgunBigJohnny: 4294967295 # Triad removed
+
     WeaponRifleVulcanCFCM: 4294967295
 # Magazines
     Magazine9x19mmPistolFMJ: 4294967295 # 9x19mm Pistol
@@ -118,7 +119,7 @@
     AmmoBox12_gaugeBeanbag: 4294967295 # 12 gauge
     AmmoBox23x75mmSlug: 4294967295 # 4 gauge
     AmmoBox23x75mmBuckshot: 4294967295 # 4 gauge
-    AmmoBox23x75mmBeanbag: 4294967295 # 4 gauge
+   # AmmoBox23x75mmBeanbag: 4294967295 # 4 gauge   # Traid Removed
   emaggedInventory:
     WeaponPistolViper: 1
 

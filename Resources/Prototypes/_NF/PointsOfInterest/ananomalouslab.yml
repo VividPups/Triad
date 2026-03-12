@@ -1,0 +1,41 @@
+- type: pointOfInterest
+  id: anomalouslab
+  parent: BasePOI
+  name: 'Newtons Cradle'
+  minimumDistance: 2500
+  maximumDistance: 5000
+  spawnGroup: Required
+  gridPath: /Maps/__Triad/POI/newtonscradle.yml
+  addComponents:
+  - type: IFF
+    color: "#ab37f8"
+  - type: StationTransit
+    routes:
+      SpawnPoints: 20
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: anomalouslab
+  mapName: 'Newtons Cradle'
+  mapPath: /Maps/__Triad/POI/newtonscradle.yml
+  minPlayers: 0
+  stations:
+    anomalouslab:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Newtons Cradle'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+            Janitor: [ 1, 1 ]
+            #science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 4, 6 ]
+            ResearchAssistant: [ 2, 3 ]
+            ForensicMantis: [ 1, 1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.
