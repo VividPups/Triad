@@ -215,7 +215,7 @@
   - SubGamemodesRuleNoXenoborg # no two motherships
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
+  # - SpaceTrafficControlEventScheduler  Triad change
   - BasicRoundstartVariation
 
 - type: gamePreset
