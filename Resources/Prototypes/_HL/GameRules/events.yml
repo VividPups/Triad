@@ -65,20 +65,24 @@
     - id: UnknownShuttleCargoLost
     - id: UnknownShuttleTravelingCuisine
     - id: UnknownShuttleDisasterEvacPod
-    - id: UnknownShuttleHonki
-    - id: UnknownShuttleNTQuark
-    - id: UnknownShuttleCruiser
-    - id: UnknownShuttleCryptid
-    - id: UnknownShuttleEternal
-    - id: UnknownShuttleFlatline
-    - id: UnknownShuttleGym
-    - id: UnknownShuttleNTIncorporation
-    - id: UnknownShuttleJoe
-    - id: UnknownShuttleLambordeere
-    - id: UnknownShuttleMeatZone
-    - id: UnknownShuttleMicroshuttle
-    - id: UnknownShuttleSpacebus
-    - id: UnknownShuttleSyndieEvacPod
+
+  #Triad start
+    #- id: UnknownShuttleHonki #Triad
+    #- id: UnknownShuttleNTQuark
+    #- id: UnknownShuttleCruiser
+    #- id: UnknownShuttleCryptid
+    #- id: UnknownShuttleEternal
+    #- id: UnknownShuttleFlatline
+    #- id: UnknownShuttleGym
+    #- id: UnknownShuttleNTIncorporation
+    #- id: UnknownShuttleJoe
+    #- id: UnknownShuttleLambordeere
+    #- id: UnknownShuttleMeatZone
+    #- id: UnknownShuttleMicroshuttle
+    #- id: UnknownShuttleSpacebus
+    #- id: UnknownShuttleSyndieEvacPod
+    #Triad end
+
     - id: ArgocyteVents
     #- id: XenoVents
     - id: reagentslimeVents
