@@ -30,7 +30,7 @@
     - id: MassHallucinations
     - id: MimicVendorRule
     - id: PowerGridCheck
-    - id: RandomSentience
+    # - id: RandomSentience TRIAD
     - id: SlimesSpawn
     - id: SolarFlare
     - id: SnakeSpawn
@@ -41,7 +41,7 @@
     - id: NFGasLeak
     - id: NFIonStorm
     - id: NFPowerGridCheck
-    - id: NFRandomSentience
+    # - id: NFRandomSentience Triad
     - id: NFSolarFlare
     - id: NFVentClog
     - id: NFBluespaceCargoCrate
@@ -62,11 +62,11 @@
     - id: BluespaceDungeonCave
     - id: BluespaceSalvage
     - id: NFSmugglingFaxBig
-    - id: UnknownShuttleCargoLost
-    - id: UnknownShuttleTravelingCuisine
-    - id: UnknownShuttleDisasterEvacPod
 
-  #Triad start
+    #Triad start
+   # - id: UnknownShuttleCargoLost
+   # - id: UnknownShuttleTravelingCuisine
+   # - id: UnknownShuttleDisasterEvacPod
     #- id: UnknownShuttleHonki #Triad
     #- id: UnknownShuttleNTQuark
     #- id: UnknownShuttleCruiser
@@ -108,9 +108,11 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     #- id: WizardSpawn
-    - id: LoneOpsSpawn
-    - id: UnknownShuttleManOWar
-    - id: UnknownShuttleInstigator
+
+  # Triad change
+   # - id: LoneOpsSpawn
+   # - id: UnknownShuttleManOWar
+   # - id: UnknownShuttleInstigator
 
 - type: entity
   id: BaseStationEvent
