@@ -148,7 +148,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
         var mutationId = msg.MutationId;
 
         if (comp.CurrentSubject is { Valid: true } subject &&
-            TryComp<GeneticsComponent>(subject, out var genetics))
+            TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics))
         {
             var mutation = genetics.Mutations.Find(m => m.Id == mutationId);
             if (mutation != null && mutation.RevealedSequence == mutation.OriginalSequence)
@@ -212,7 +212,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
     private void OnSaveMutation(EntityUid uid, DnaScannerConsoleComponent comp, DnaScannerSaveMutationToStorageMessage msg)
     {
         if (comp.CurrentSubject is not { Valid: true } subject ||
-            !TryComp<GeneticsComponent>(subject, out var genetics))
+            !TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics))
             return;
 
         var mutation = genetics.Mutations.Find(m => m.Id == msg.MutationId);
@@ -239,7 +239,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
     private void OnSequencerButton(EntityUid uid, DnaScannerConsoleComponent comp, DnaScannerSequencerButtonPressedMessage msg)
     {
         if (comp.CurrentSubject is not { Valid: true } subject ||
-            !TryComp<GeneticsComponent>(subject, out var genetics) ||
+            !TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics) ||
             !TryComp<MobStateComponent>(subject, out var mobState) ||
             mobState.CurrentState == MobState.Dead ||
             !_proto.TryIndex<GeneticMutationPrototype>(msg.MutationId, out var proto) ||
@@ -315,7 +315,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
 
     private void OnScrambleDna(EntityUid uid, DnaScannerConsoleComponent comp, DnaScannerScrambleDnaMessage msg)
     {
-        if (comp.CurrentSubject is not { Valid: true } subject || !TryComp<GeneticsComponent>(subject, out var genetics))
+        if (comp.CurrentSubject is not { Valid: true } subject || !TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics))
             return;
 
         _genetics.ScrambleDna(subject, genetics);
@@ -408,7 +408,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
     private void DiscoverCompletedMutations(EntityUid uid, DnaScannerConsoleComponent comp)
     {
         if (comp.CurrentSubject is not { Valid: true } subject ||
-            !TryComp<GeneticsComponent>(subject, out var genetics))
+            !TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics))
             return;
 
         foreach (var mutation in genetics.Mutations)
@@ -434,7 +434,7 @@ public sealed class DnaScannerConsoleSystem : EntitySystem
             healthStatus = GetHealthString(subject);
             radiationDamage = GetRadiationDamage(subject);
 
-            if (TryComp<GeneticsComponent>(subject, out var genetics))
+            if (TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(subject, out var genetics))
             {
                 instability = genetics.GeneticInstability;
                 baseIds = new HashSet<string>(genetics.BaseMutationIds);

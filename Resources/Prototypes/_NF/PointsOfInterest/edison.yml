@@ -37,8 +37,10 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Edison Power Plant'
-         #- type: StationJobs
-           #availableJobs:
-             #Pilot: [ 0, 0 ]
-             #Mercenary: [ 0, 0 ]
-             #Contractor: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+          #engineering
+            AtmosphericTechnician: [ 2, 3 ]
+            ChiefEngineer: [ 1, 1 ]
+            StationEngineer: [ 6, 8 ]
+            TechnicalAssistant: [ 3, 5 ]

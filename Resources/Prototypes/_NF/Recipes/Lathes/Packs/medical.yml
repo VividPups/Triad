@@ -46,6 +46,7 @@
   - ReinforcedJug
   - VialBluespace
   - ClothingOuterHardsuitMedical
+  - DefibrillatorCompact  # Triad
 
 - type: latheRecipePack
   id: NFMedicalBoards
@@ -54,4 +55,4 @@
   - ChemDispenserMachineCircuitboard
   - ChemMasterMachineCircuitboard
   - ReagentGrinderMachineCircuitboard
-  - HotplateMachineCircuitboard
+  # - HotplateMachineCircuitboard

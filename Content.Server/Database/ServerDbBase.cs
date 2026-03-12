@@ -25,6 +25,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Server.Humanoid.Markings.Extensions;
+using Serilog;
 
 namespace Content.Server.Database
 {
@@ -865,9 +866,17 @@ namespace Content.Server.Database
 
             foreach (var player in playerIds)
             {
+                // TRIAD SECTOR //
+                // Don't do this. We need to fix this properly, but it's an entire ass can of worms! - DaCookieCakes
+                if (!players.TryGetValue(player, out var playerId))
+                {
+                    Log.Warning("AddRoundPlayers: Player GUID {Player} not found in Player table, skipping round record. Player may be connecting for the first time.", player);
+                    continue;
+                }
+
                 await db.DbContext.Database.ExecuteSqlAsync($"""
-INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}) ON CONFLICT DO NOTHING
-""");
+                    INSERT INTO player_round (players_id, rounds_id) VALUES ({playerId}, {id}) ON CONFLICT DO NOTHING
+                    """);
             }
 
             await db.DbContext.SaveChangesAsync();
@@ -948,7 +957,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 try
                 {
                     await using var db = await GetDb();
-                    
+
                     // Get all unique player IDs referenced in these logs
                     var playerIds = logs
                         .SelectMany(log => log.Players)

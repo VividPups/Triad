@@ -112,7 +112,7 @@ public sealed class GeneticAnalyzerSystem : SharedGeneticAnalyzerSystem
             return;
         }
 
-        if (!TryComp<GeneticsComponent>(target, out _))
+        if (!TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(target, out _))
             return;
 
         args.Handled = true;
@@ -131,7 +131,7 @@ public sealed class GeneticAnalyzerSystem : SharedGeneticAnalyzerSystem
 
     private void OnDoAfter(EntityUid uid, GeneticAnalyzerComponent component, GeneticAnalyzerDoAfterEvent args)
     {
-        if (args.Cancelled || args.Target is not { Valid: true } target || !TryComp<GeneticsComponent>(target, out var genetics))
+        if (args.Cancelled || args.Target is not { Valid: true } target || !TryComp<Shared._Funkystation.Genetics.Components.GeneticsComponent>(target, out var genetics))
             return;
 
         if (!_cell.HasDrawCharge(uid))

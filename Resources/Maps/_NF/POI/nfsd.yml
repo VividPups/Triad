@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 02/21/2026 13:56:48
+  time: 03/07/2026 06:28:04
   entityCount: 3548
 maps: []
 grids:
@@ -2764,7 +2764,7 @@ entities:
       pos: 18.5,28.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -729.8326
+      secondsUntilStateChange: -1179.0181
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9354,6 +9354,13 @@ entities:
     - type: Transform
       pos: 6.5,3.5
       parent: 1
+- proto: DebugGenerator
+  entities:
+  - uid: 2048
+    components:
+    - type: Transform
+      pos: -0.5,-5.5
+      parent: 1
 - proto: DefaultStationBeaconAnchor
   entities:
   - uid: 1331
@@ -14863,20 +14870,10 @@ entities:
     - type: Transform
       pos: -3.5,-5.5
       parent: 1
-  - uid: 2046
-    components:
-    - type: Transform
-      pos: -0.5,-5.5
-      parent: 1
   - uid: 2047
     components:
     - type: Transform
       pos: 2.5,-3.5
-      parent: 1
-  - uid: 2048
-    components:
-    - type: Transform
-      pos: -0.5,-3.5
       parent: 1
   - uid: 2049
     components:
@@ -17602,6 +17599,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -30.5,5.5
+      parent: 1
+- proto: ShieldGeneratorPOI
+  entities:
+  - uid: 3544
+    components:
+    - type: Transform
+      pos: -0.5,-3.5
       parent: 1
 - proto: SignCargo
   entities:
@@ -22672,47 +22676,63 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 32.5,13.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3474
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -36.5,-0.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3475
     components:
     - type: Transform
       pos: -15.5,-10.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3476
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 29.5,-14.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3477
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,12.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3478
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,12.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3479
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -28.5,16.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3480
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -28.5,-17.5
       parent: 1
+    missingComponents:
+    - Destructible
 - proto: WeaponTurretL85Autocannon
   entities:
   - uid: 3481
@@ -22720,47 +22740,63 @@ entities:
     - type: Transform
       pos: -3.5,-11.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3482
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 42.5,-7.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3483
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -37.5,-2.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3484
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 42.5,1.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3485
     components:
     - type: Transform
       pos: 2.5,-11.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3486
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -37.5,1.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3487
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,22.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3488
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -17.5,22.5
       parent: 1
+    missingComponents:
+    - Destructible
 - proto: WeaponTurretType35
   entities:
   - uid: 3489
@@ -22769,58 +22805,78 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -33.5,3.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3490
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -5.5,9.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3491
     components:
     - type: Transform
       pos: 4.5,-10.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3492
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,9.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3493
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 41.5,3.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3494
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 41.5,-9.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3495
     components:
     - type: Transform
       pos: -5.5,-10.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3496
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -33.5,-4.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3497
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -11.5,21.5
       parent: 1
+    missingComponents:
+    - Destructible
   - uid: 3498
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -19.5,21.5
       parent: 1
+    missingComponents:
+    - Destructible
 - proto: WindoorSecureArmoryLocked
   entities:
   - uid: 3512
